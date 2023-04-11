@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    let comments = [
+        {id: 1, text : 'hello'},
+        {id: 2, text : 'bye'}
+    ]
+    let test;
+    return (
+    <div>
+        <h1>Hello from the app component</h1>
+        <div>
+            <h3>hellos</h3>
+            <ul>
+            {comments.map( (comment, index) => 
+                <li key={index}>{comment.text} </li>
+            )}
+
+            </ul>
+        </div>
+        
     </div>
-  );
+    );
+    
 }
 
-export default App;
+export default App
